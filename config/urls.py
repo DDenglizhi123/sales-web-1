@@ -1,0 +1,11 @@
+from django.contrib import admin
+from django.urls import path, include
+# from home.views import home_page
+
+urlpatterns = [
+    # path('', home_page),
+    path('admin/', admin.site.urls),
+    path('customers/', include('customers.urls')),
+    path('products/',include('products.urls')),
+    path('contracts/',include('contracts.urls')),
+]

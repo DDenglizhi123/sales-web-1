@@ -1,0 +1,60 @@
+.container{
+    border: 5px solid black;
+    display: grid;
+}
+.container-header{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.container-details{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.container-main{
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.row-tittle{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 2fr 2fr 3fr 3fr;
+}
+.row-details{
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: 1fr 1fr; 
+}
+.row1-detials{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 2fr 2fr 3fr 3fr; 
+}
+.row2-detials{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 2fr 2fr 3fr 3fr; 
+}
+.container-sum{
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+}
+.container-bankinfo-paymentterm{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.signature{
+    place-self: end end;
+}
+.email{
+    place-self: end end;
+}
+.company-logo{
+    place-self: center end;
+}

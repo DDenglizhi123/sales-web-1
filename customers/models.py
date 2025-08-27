@@ -5,14 +5,14 @@ class Customer(models.Model):
 
     id = models.AutoField(primary_key=True, auto_created=True)
     name = models.CharField(max_length=200, unique=True)
-    name_in_short = models.CharField(max_length=10, blank=True, null=True, help_text='Optional')
+    name_in_short = models.CharField(max_length=10, blank=True, null=True)
     TIN = models.CharField(max_length=11, help_text='eg. xxx-xxx-xxx', blank=True, null=True, unique=True)
     VRN = models.CharField(max_length=11, help_text='eg. xx-xxxxxx-x', blank=True, null=True, unique=True)
-    contact_person = models.CharField(max_length=100, blank=True, help_text='Optional')
-    phone = models.CharField(max_length=20, blank=True, null=True, help_text='Optional')
-    emial = models.EmailField(blank=True, null=True, help_text='Optional')
-    address_line1 = models.CharField(max_length=200, blank=True, null=True, help_text='Optional')
-    address_line2 = models.CharField(max_length=200, blank=True, null=True, help_text='Optional')
+    contact_person = models.CharField(max_length=100, blank=True)
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    emial = models.EmailField(blank=True, null=True)
+    address_line1 = models.CharField(max_length=200, blank=True, null=True)
+    address_line2 = models.CharField(max_length=200, blank=True, null=True)
 
     BUSINESS_TYPE_CHOICES = [
         ('REA', 'REA Contractor'),

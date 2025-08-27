@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'customers',
     'contracts',
     'products',
+    'createPPD',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sales_web',
         'USER':'root',
-        'PASSWORD':'denglizhi123',
+        'PASSWORD':'denglizhi',
     }
 }
 

@@ -6,12 +6,21 @@ class Products(models.Model):
     id = models.AutoField(primary_key=True, auto_created=True)
     item_name = models.CharField(max_length=500, unique=True, blank=False, null=False)
     price = models.DecimalField(max_digits=10, decimal_places=2, blank=False, null=False)
-    keyword1 = models.CharField(max_length=50, blank=True, null=True, help_text='Specific1')
-    keyword2 = models.CharField(max_length=50, blank=True, null=True, help_text='Specific2')
-    keyword3 = models.CharField(max_length=50, blank=True, null=True, help_text='Specific3')
+    item_type = [
+        ('C', 'Cable'),
+        ('T', 'Transformer'),
+        ('A', 'Accessories'),
+        ('P', 'Concrete poles'),
+        ('S', 'Spare parts'),
+        ('R', 'Raw Materials'),
+        ('O', 'Others'),
+    ]
+    product_type = models.CharField(max_length=15, blank=False, null=False, help_text='Cable, Transformer, Accessories, Concrete poles, Spare parts, Raw Materials', choices=item_type, default='C')
+    # keyword2 = models.CharField(max_length=50, blank=True, null=True, help_text='Specific2')
+    # keyword3 = models.CharField(max_length=50, blank=True, null=True, help_text='Specific3')
     item_number = models.CharField(max_length=20, blank=True, null=True, unique=True)
     unit_type = [
-        ('LT', 'liter'),
+        ('LT', 'Liter'),
         ('KG', 'KG'),
         ('KM', 'KM'),
         ('M', 'M'),

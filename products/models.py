@@ -15,7 +15,7 @@ class Products(models.Model):
         ('R', 'Raw Materials'),
         ('O', 'Others'),
     ]
-    product_type = models.CharField(max_length=15, blank=False, null=False, help_text='Cable, Transformer, Accessories, Concrete poles, Spare parts, Raw Materials', choices=item_type, default='C')
+    product_type = models.CharField(max_length=15, blank=False, null=False, help_text='Cable, Transformer, Accessories, Concrete poles, Spare parts, Raw Materials', choices=item_type, default='Cable')
     # keyword2 = models.CharField(max_length=50, blank=True, null=True, help_text='Specific2')
     # keyword3 = models.CharField(max_length=50, blank=True, null=True, help_text='Specific3')
     item_number = models.CharField(max_length=20, blank=True, null=True, unique=True)
